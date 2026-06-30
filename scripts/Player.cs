@@ -4,11 +4,17 @@ using System;
 public partial class Player : CharacterBody2D
 {
 
+	private StateMachine _stateMachine;
+
+	public override void _Ready()
+	{
+		_stateMachine = GetNode<StateMachine>("StateMachine");
+		_stateMachine.Begin(this);
+	}
 
 
 
 
-	
 	// public const float Speed = 300.0f;
 	// public const float JumpVelocity = -400.0f;
 

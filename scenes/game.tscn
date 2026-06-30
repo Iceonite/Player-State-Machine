@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b3pkra4378lg6"]
+
+[ext_resource type="PackedScene" uid="uid://fdk7q2ilr46c" path="res://scenes/player.tscn" id="1_uwrxv"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8cj0n"]
+
+[node name="Game" type="Node2D" unique_id=1755723870]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=813262495]
+shape = SubResource("WorldBoundaryShape2D_8cj0n")
+
+[node name="Player" parent="." unique_id=614748249 instance=ExtResource("1_uwrxv")]

@@ -10,7 +10,7 @@ public partial class StateMachine : Node
 	private Dictionary<string, State> _states; // Name of Node is key, State instance is value
 	private State _currentState; 
 
-	public override void _Ready(Node parent)
+	public void Begin(Node parent)
 	{
 		// Gather all states and save them
 		_states = new Dictionary<string, State>();
