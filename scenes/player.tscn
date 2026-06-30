@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://fdk7q2ilr46c"]
+
+[ext_resource type="Script" uid="uid://d2wk0n8g5d5wq" path="res://scripts/Player.cs" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://ctw4o411bsvad" path="res://scenes/state_machine.tscn" id="2_qhqgy"]
+
+[node name="Player" type="CharacterBody2D" unique_id=614748249]
+script = ExtResource("1_g2els")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1751199979]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=911109535]
+
+[node name="StateMachine" parent="." unique_id=304869829 instance=ExtResource("2_qhqgy")]
+
+[node name="Dash" type="Node" parent="StateMachine" unique_id=618788012]
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1656271652]
+
+[node name="Walk" type="Node" parent="StateMachine" unique_id=883241902]
+
+[node name="Jump" type="Node" parent="StateMachine" unique_id=233866249]
