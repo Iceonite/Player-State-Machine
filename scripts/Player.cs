@@ -6,9 +6,12 @@ public partial class Player : CharacterBody2D
 
 	private StateMachine _stateMachine;
 
+	public AnimatedSprite2D sprite;
+
 	public override void _Ready()
 	{
 		_stateMachine = GetNode<StateMachine>("StateMachine");
+		sprite = GetNode<AnimatedSprite2D>("Sprite");
 		_stateMachine.Begin(this);
 	}
 

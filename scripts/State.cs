@@ -6,7 +6,7 @@ using System;
 public partial class State : Node
 {
 	public StateMachine fsm; // Parent State Machine instance reference
-	public Node parent; // Overall Parent Node
+	public Player parent; // Overall Parent Node
 
 	public virtual void Enter() {}// When state is entered
 	public virtual void Exit() {} // When state is exited
