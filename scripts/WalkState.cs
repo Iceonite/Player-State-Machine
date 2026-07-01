@@ -48,7 +48,6 @@ public partial class WalkState : State
 
 		if (direction != Vector2.Zero)
 		{
-			GD.Print("Something I guess");
 			newVelocity.X = direction.X * Speed;
 		}
 		else
@@ -59,7 +58,5 @@ public partial class WalkState : State
 
 		parent.Velocity = newVelocity;
 		parent.MoveAndSlide();
-		GD.Print("Made it this far");
-		GD.Print(parent.Name);
 	}
 }

@@ -15,12 +15,14 @@ public partial class IdleState : State
 		parent.sprite.Play("Idle");
 	}
 
-	public override void HandleInput(InputEvent @event) 
+	public override void PhysicsUpdate(float delta)
 	{
-		if (@event.IsActionPressed("moveLeft") || @event.IsActionPressed("moveRight"))
+		Vector2 direction = Input.GetVector("moveLeft", "moveRight", "moveUp", "moveDown");
+		if (direction != Vector2.Zero)
 		{
 			fsm.StateTransition("Walk");
 		}
-	} 
+
+	}
 
 }
